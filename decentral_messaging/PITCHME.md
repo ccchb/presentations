@@ -23,11 +23,11 @@
 ## Dezentralität
 - **Peer-to-Peer**
 
-Geräte tauschen direkt mit einander Nachrichten aus (ohne eine zentrale Componente)
+Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componente)
 
 - **Federation**
 
-Mehrere zentrale Komponenten kommunizieren untereinander
+Kommunikation über zentrale Komponenten
 
 
 Note:
@@ -46,16 +46,16 @@ Note:
 
 #### Warum notwendig?
 
-- Eröffnet ein Wettbewerb
+- Eröffnet einen Wettbewerb
 - kleine und viele Angriffsziele
-  - vor Hacker
+  - vor Kriminelle
   - vor Regierungen
     - alle Überwachen
     - blockieren / sperren (Zensur)
 - Verringert Missbrauch durch Vertrauen
 
 Note:
-- _Eröffnet ein Wettbewerb:_ damit Fortschritt für neue Marktteilnehmer
+- _Eröffnet einen Wettbewerb:_ damit Fortschritt für neue Marktteilnehmer
     (Gewinne gehen zum größten Teile in die USA)
    - Entscheidungen: z.B. nur noch auf Englisch, Mark Zuckerberg darf Nachrichten löschen
 - _Angriffsziele:_
@@ -65,7 +65,7 @@ Note:
     - alle Server blockieren (Telegram - Russland)
 - _Verringert Missbrauch durch vertrauen_
   - **Auswirkung:** nicht alle Daten können **geklaut** oder **analysiert** werden
-    - Analysiert zur Manipulation für Werbung oder Politisch (Cambridge Analytics)
+    - Analysiert zur Manipulation (Werbung oder Politisch, siehe Cambridge Analytica)
   - **Bei Missbrauch** leichterer Wechsel
 
 ---
@@ -76,6 +76,7 @@ Note:
 #### Nachteile
 - Komplexität steigt
 - Gewollte Verringerung an Marktanteil
+- Kann auch von kriminellen Elementen genutzt werden
 
 Note:
 - _Komplexität steigt:_ Da nicht nur Clients sondern auch Server untereinander sicher (Ausfall, Vertrauensvoll) kommunizieren müssen.
@@ -93,7 +94,7 @@ Note:
 Note:
 - Jingle:
   - Aushandlung von Datenverbindung (angelehnt an SIP)
-  - für: Datienaustausch, Video/Voice-Chat, ...
+  - für: Datenaustausch, Video/Voice-Chat, ...
 
 ---
 
@@ -178,13 +179,15 @@ Types:
 - result
 - error
 
+Note:
+- Der Inhalt der XML-Element ist im RFC nicht vorgegeben und kann für viele Funktionen genutzt werden.
 
 ---
 
 ## Software <small>Clients</small>
 #### Empfehlungen:
 - Conversations (Android)
-	- Pix-Art Messsenger
+	- Pix-Art Messenger
 - ChatSecure (iPhone)
 - Gajim (Desktop)
 - ConverseJS (WebClient)
@@ -204,7 +207,7 @@ Bombus - Client in J2ME für normale Telefone
 	- riesige Sammlung an erweiterbaren Modulen (die man nutzen muss)
 
 - **ejabberd** (Fork: mongooseIM) in erlang
-	- besitzt alles funktionen von Haus aus
+	- besitzt alle Funktionen von Haus aus
 	- sehr gut gewartet
 
 - **OpenFire** in Java
@@ -250,11 +253,11 @@ Note:
 - Geräte erstellt **asynchrones** Schlüsselpaar
   - öffentlichen Schlüssel wird per PubSub auf dem Server hinterlegt
 - Kontakte werden durch PEP / PubSub über neuen Schlüssel informiert
-  - Dieser muss diesen öffentlichen Schlüssel
+  - Dieser muss diesen öffentlichen Schlüssel laden
 
 Note:
-- synchrone: entspricht ein allen bekanntes Passwort
-  - asynchrone: mathematisches Verfahren mit öffentlicher und privater Schlüssel
+- synchrone: entspricht einem Passwort, was allen Gesprächsteilnehmern bekannt ist.
+  - asynchrone: mathematisches Verfahren mit Schlüsselpaaren (öffentlicher und privater Schlüssel)
 - Kontakte = Roster
 - den **neuen oder weiteren** öffentlichen Schlüssel
 
@@ -276,7 +279,7 @@ Note:
   - Biboumi: IRC
   - Spectrum2: e.g AIM, ICQ, MSN, Yahoo, Telegram, Twitter, "WhatsApp"
 - Commands
-	- Internet of Thinks
+	- Internet of Things
 
 [XEP-Liste](https://xmpp.org/extensions/) letzter Eintrag: XEP-0410: MUC Self-Ping (Schrödinger's Chat)
 
@@ -303,8 +306,7 @@ Note:
 
 #### Federation
 - **Matrix** (Riot):
-	- Protokoll durch einer Firma vorgegeben
-	- IRC (Transport) representiert oftmals alle Benutzer, als ein Einziger
+	- Änderungsvorschläge am Protokoll werden durch das Unternehmen entschieden
 - (mir sonst keine Weiteren bekannt ...)
 
 
@@ -316,4 +318,3 @@ Note:
 
 3. **Mißtraue Autoritäten – fördere Dezentralisierung.**
 @snapend
-
