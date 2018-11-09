@@ -46,7 +46,7 @@ Note:
 
 #### Warum notwendig?
 
-- Eröffnet einen Wettbewerb
+- Eröffnet ein Wettbewerb
 - kleine und viele Angriffsziele
   - vor Kriminelle
   - vor Regierungen
@@ -55,7 +55,7 @@ Note:
 - Verringert Missbrauch durch Vertrauen
 
 Note:
-- _Eröffnet einen Wettbewerb:_ damit Fortschritt für neue Marktteilnehmer
+- _Eröffnet einen Wettbewerb:_ damit fortschritt
     (Gewinne gehen zum größten Teile in die USA)
    - Entscheidungen: z.B. nur noch auf Englisch, Mark Zuckerberg darf Nachrichten löschen
 - _Angriffsziele:_
@@ -63,9 +63,9 @@ Note:
   - Regierungen können nicht
     - den Zugang zu allen Servern verlangen (NSA - Snowden)
     - alle Server blockieren (Telegram - Russland)
-- _Verringert Missbrauch durch vertrauen_
+- _Verringert Missbrauch durch Vertrauen_
   - **Auswirkung:** nicht alle Daten können **geklaut** oder **analysiert** werden
-    - Analysiert zur Manipulation (Werbung oder Politisch, siehe Cambridge Analytica)
+    - Analysiert zur Manipulation (Werbung oder politisch, siehe Cambridge Analytica)
   - **Bei Missbrauch** leichterer Wechsel
 
 ---
@@ -77,13 +77,17 @@ Note:
 - Komplexität steigt
 - Gewollte Verringerung an Marktanteil
 - Kann auch von kriminellen Elementen genutzt werden
+- Nutzer müssen sich ggf. sich Ihre Adresse und Passwort sich merken
 
 Note:
-- _Komplexität steigt:_ Da nicht nur Clients sondern auch Server untereinander sicher (Ausfall, Vertrauensvoll) kommunizieren müssen.
+- _Komplexität steigt:_ Da nicht nur Clients, sondern auch Server untereinander sicher (Ausfall, vertrauensvoll) kommunizieren müssen.
+- _kriminellen Elementen:_ wie bei jeder Technologie kann diese auch von Bösen genutzt werden.
+- _... sich merken:_ allerdings müssen Sie dies auch für Ihre E-Mail-Adresse, was noch Standard im Internet ist.
 
 ---
-## XMPP
-- Existiert seit 1999
+### Extensible Messaging and Presence Protocol (XMPP)
+
+- Existiert seit 1999 (unter den Namen Jabber)
 - IETF Standard seit 2002
 
 
@@ -180,7 +184,7 @@ Types:
 - error
 
 Note:
-- Der Inhalt der XML-Element ist im RFC nicht vorgegeben und kann für viele Funktionen genutzt werden.
+- Die Inhalte, die in diesen XML-Elementen drin sind, werden im RFC nicht vorgegeben und kann für viele Funktionen genutzt werden.
 
 ---
 
@@ -198,7 +202,7 @@ Note:
 ---
 ## Software <small>Clients</small>
 Bombus - Client in J2ME für normale Telefone
-<img width="50%" src="img/j2me-bombus.jpg" alt="Wikipedia - Article Java"/>
+<img width="50%" src="decentral_messaging/img/j2me-bombus.jpg" alt="Wikipedia - Article Java"/>
 ---
 
 ## Software <small>Server</small>
@@ -207,7 +211,7 @@ Bombus - Client in J2ME für normale Telefone
 	- riesige Sammlung an erweiterbaren Modulen (die man nutzen muss)
 
 - **ejabberd** (Fork: mongooseIM) in erlang
-	- besitzt alle Funktionen von Haus aus
+	- besitzt alle nötigen Funktionen von Haus aus
 	- sehr gut gewartet
 
 - **OpenFire** in Java
@@ -215,7 +219,7 @@ Bombus - Client in J2ME für normale Telefone
 ---
 
 ## Ist der Hoster gut
-Auswahl des richtigen Servers
+Tools zum Testen des Servers (Auswahl an Servern)
 - [Compliance](https://compliance.conversations.im/) ([support Alles](https://compliance.conversations.im/api/compliant_servers/) / API)
 - [Status](https://status.conversations.im/historical/) für S2S + Uptime
 
@@ -256,12 +260,12 @@ Note:
   - Dieser muss diesen öffentlichen Schlüssel laden
 
 Note:
-- synchrone: entspricht einem Passwort, was allen Gesprächsteilnehmern bekannt ist.
+- synchrone: Entspricht einem Passwort, was allen Gesprächsteilnehmern bekannt ist.
   - asynchrone: mathematisches Verfahren mit Schlüsselpaaren (öffentlicher und privater Schlüssel)
 - Kontakte = Roster
 - den **neuen oder weiteren** öffentlichen Schlüssel
 
-- Signiert und Verschlüsselt
+- Signiert und verschlüsselt
 - zurückziehen des Schlüssels
 
 
@@ -278,8 +282,10 @@ Note:
 - Transports
   - Biboumi: IRC
   - Spectrum2: e.g AIM, ICQ, MSN, Yahoo, Telegram, Twitter, "WhatsApp"
+- PubSub
+  - Blogging / Posting (siehe Movim)
 - Commands
-	- Internet of Things
+  - Internet of Things
 
 [XEP-Liste](https://xmpp.org/extensions/) letzter Eintrag: XEP-0410: MUC Self-Ping (Schrödinger's Chat)
 
@@ -291,10 +297,10 @@ Note:
 ## Alternativen zu XMPP
 
 #### Peer-to-Peer
-- Nutzen das Tor netzwerk
+- Nutzen das Tor-Netzwerk
 	- **Tox**
 	- **Briar**
-		- kann auch Local per Wifi und Bluetooth arbeiten
+		- kann auch Local per Wifi und Bluetooth genutzt werden
 	- ... (viele mehr)
 - libp2p
 
