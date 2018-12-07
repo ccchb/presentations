@@ -1,0 +1,20 @@
+baseURL = "https://ccchb.github.io/presentations/"
+languageCode = "en-us"
+title = "Presentation from CCCHB"
+disableKinds = ["sitemap", "RSS"]
+theme = "reveal-hugo"
+
+[params.reveal_hugo]
+history = true
+highlight_theme = "qtcreator_dark"
+margin = 0.2
+custom_theme = "css/main.css"
+transition = "slide"
+transition_speed = "fast"
+
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
+

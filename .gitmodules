@@ -1,0 +1,6 @@
+[submodule "themes/reveal-hugo/static/reveal-js"]
+	path = themes/reveal-hugo/static/reveal-js
+	url = https://github.com/hakimel/reveal.js.git
+[submodule "themes/reveal-hugo/static/highlight-js"]
+	path = themes/reveal-hugo/static/highlight-js
+	url = https://github.com/highlightjs/highlight.js.git
