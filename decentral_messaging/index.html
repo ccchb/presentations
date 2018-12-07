@@ -1,0 +1,562 @@
+<!doctype html><html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dezentrale Messenger</title>
+    
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://ccchb.github.io/presentations/reveal-js/css/reveal.css">
+    <link rel="stylesheet" href="/presentations/css/main.css" id="theme">
+    <link rel="stylesheet" href="https://ccchb.github.io/presentations/highlight-js/src/styles/qtcreator_dark.css">
+    
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/ccchb.github.io\/presentations\/reveal-js/css/print/pdf.css' : 'https:\/\/ccchb.github.io\/presentations\/reveal-js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+<section>
+
+<p><h2 style="white-space: nowrap;">Dezentrale Messenger</h2>
+<br/>
+<h4 style="white-space: nowrap;">The very last word in instant messaging</h4>
+(Motto vom XMPP-Client Converations)</p>
+
+<p><span class="text-reboot">genofire - Chaos Computer Club Bremen e.V.</span></p>
+
+</section><section>
+
+<h2 id="agenda">Agenda</h2>
+
+<ul>
+<li>Dezentralität</li>
+<li>XMPP - Der Standard</li>
+<li>Software (Client und Server)</li>
+<li>Ist der Hoster gut</li>
+<li>Verschlüsselung</li>
+<li>Ausblick</li>
+<li>Alternativen</li>
+</ul>
+
+</section><section>
+
+<h2 id="dezentralität">Dezentralität</h2>
+
+<ul>
+<li>vs. <strong>Zentralität</strong></li>
+</ul>
+
+<p>Leider von den meisten Messenger verwendet</p>
+
+<p><img src="./img/central.svg" style="border: none; background:transparent;" /></p>
+
+</section><section>
+
+<h2 id="dezentralität-1">Dezentralität</h2>
+
+<ul>
+<li><strong>Federation</strong></li>
+</ul>
+
+<p>Kommunikation über verschieden unabhängige zentrale Komponenten</p>
+
+<p><img src="./img/federation.svg" style="border: none; background:transparent;" /></p>
+
+<aside class="notes"><p><strong>Federation</strong>
+- E-Mail (ISP: benutzer@hoster.de)
+- Telefonnummern (Addr: hat oftmals die ersten Ziffern für sich reserviert)</p>
+</aside>
+
+</section><section>
+
+<h2 id="dezentralität-2">Dezentralität</h2>
+
+<ul>
+<li><strong>Peer-to-Peer</strong></li>
+</ul>
+
+<p>Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componente)</p>
+
+<p><img src="./img/p2p.svg" style="border: none; background:transparent;" /></p>
+
+<aside class="notes"><p><strong>P2P</strong>
+- Postkasten, jeder kann zum Empfänger gehen und selbst etwas in den Kasten werfen.
+  (wenn es keine Post gibt)</p>
+</aside>
+
+</section><section>
+
+<h2 id="dezentralität-3">Dezentralität</h2>
+
+<h4 id="warum-notwendig">Warum notwendig?</h4>
+
+<ul>
+<li>Eröffnet ein Wettbewerb</li>
+<li>kleine und viele Angriffsziele
+
+<ul>
+<li>vor Kriminelle</li>
+<li>vor Regierungen</li>
+<li>alle Überwachen</li>
+<li>blockieren / sperren (Zensur)</li>
+</ul></li>
+<li>Verringert Missbrauch durch Vertrauen</li>
+</ul>
+
+<aside class="notes"><ul>
+<li><em>Eröffnet einen Wettbewerb:</em> damit fortschritt
+(Gewinne gehen zum größten Teile in die USA)
+
+<ul>
+<li>Entscheidungen: z.B. nur noch auf Englisch, Mark Zuckerberg darf Nachrichten löschen</li>
+</ul></li>
+<li><em>Angriffsziele:</em>
+
+<ul>
+<li>Hacker können nicht alle Server kompromentieren</li>
+<li>Regierungen können nicht</li>
+<li>den Zugang zu allen Servern verlangen (NSA - Snowden)</li>
+<li>alle Server blockieren (Telegram - Russland)</li>
+</ul></li>
+<li><em>Verringert Missbrauch durch Vertrauen</em>
+
+<ul>
+<li><strong>Auswirkung:</strong> nicht alle Daten können <strong>geklaut</strong> oder <strong>analysiert</strong> werden</li>
+<li>Analysiert zur Manipulation (Werbung oder politisch, siehe Cambridge Analytica)</li>
+<li><strong>Bei Missbrauch</strong> leichterer Wechsel</li>
+</ul></li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="dezentralität-4">Dezentralität</h2>
+
+<h4 id="nachteile">Nachteile</h4>
+
+<ul>
+<li>Komplexität steigt</li>
+<li>Gewollte Verringerung an Marktanteil</li>
+<li>Kann auch von kriminellen Elementen genutzt werden</li>
+<li>Nutzer müssen ggf. sich Ihre Adresse und Passwort merken</li>
+</ul>
+
+<aside class="notes"><ul>
+<li><em>Komplexität steigt:</em> Da nicht nur Clients, sondern auch Server untereinander sicher (Ausfall, vertrauensvoll) kommunizieren müssen.</li>
+<li><em>kriminellen Elementen:</em> wie bei jeder Technologie kann diese auch von Bösen genutzt werden.</li>
+<li><em>&hellip; sich merken:</em> allerdings müssen Sie dies auch für Ihre E-Mail-Adresse, was noch Standard im Internet ist.</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h3 id="extensible-messaging-and-presence-protocol-xmpp">Extensible Messaging and Presence Protocol (XMPP)</h3>
+
+<ul>
+<li>Existiert seit 1999 (unter den Namen Jabber)</li>
+
+<li><p>IETF Standard seit 2002</p></li>
+
+<li><p>Google Talk 2005 - 2013 (entwickelte Jingle)</p></li>
+
+<li><p>Facebook 2010 - 2014</p></li>
+
+<li><p>WhatsApp nutzt es intern</p></li>
+</ul>
+
+<aside class="notes"><ul>
+<li>Jingle:
+
+<ul>
+<li>Aushandlung von Datenverbindung (angelehnt an SIP)</li>
+<li>für: Datenaustausch, Video/Voice-Chat, &hellip;</li>
+</ul></li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="xmpp">XMPP</h2>
+
+<h4 id="adressierung">Adressierung</h4>
+
+<p>JID (Jabber ID) genannt:</p>
+
+<pre><code>node@domain/ressource
+</code></pre>
+
+<p>URI-Format: (falls MUC mit <code>?join</code> am Ende)</p>
+
+<pre><code>xmpp:node@domain?join
+</code></pre>
+
+<aside class="notes"><ul>
+<li>MUC (Multi User Chat): Gruppenchat</li>
+</ul>
+
+<p><strong>Als User</strong></p>
+
+<ul>
+<li>benutzer@server/gerät</li>
+</ul>
+
+<p><strong>In MUC</strong></p>
+
+<ul>
+<li>chatraum@muc-server/nickame</li>
+</ul>
+
+<p><strong>Transport</strong>
+- ganz unterschiedlich</p>
+</aside>
+
+</section><section>
+
+<h2 id="xmpp-1">XMPP</h2>
+
+<p><strong>Message</strong></p>
+
+<pre><code class="language-xml">&lt;message from=&quot;geno@fireorbit.de&quot;
+ to=&quot;#ccchb@irc.hackint.org&quot; type=&quot;groupchat&quot;&gt;
+	Hello World
+&lt;/message&gt;
+</code></pre>
+
+<p>Types:</p>
+
+<ul>
+<li>chat</li>
+<li>groupchat</li>
+<li>headline</li>
+<li>normal</li>
+<li>error</li>
+</ul>
+
+</section><section>
+
+<h2 id="xmpp-2">XMPP</h2>
+
+<p><strong>Present</strong>: Aktuelle Live Informationen</p>
+
+<pre><code class="language-xml">&lt;present to=&quot;#ccchb@irc.hackint.org&quot; type=&quot;subscribe&quot;&gt;
+&lt;/present&gt;
+</code></pre>
+
+<p>Types:</p>
+
+<ul>
+<li>error</li>
+<li>probe</li>
+<li>subscribe(d)</li>
+<li>unavailable</li>
+<li>unsubscribe(d)</li>
+</ul>
+
+</section><section>
+
+<h2 id="xmpp-3">XMPP</h2>
+
+<p><strong>IQ</strong> (Instant Query): Abfragen mit Rückantworten</p>
+
+<pre><code class="language-xml">&lt;iq to=&quot;irc.hackint.org&quot; type=&quot;get&quot;&gt;
+	&lt;ping xmlns='urn:xmpp:ping'/&gt;
+&lt;/iq&gt;
+</code></pre>
+
+<p>Types:</p>
+
+<ul>
+<li>get</li>
+<li>set</li>
+<li>result</li>
+<li>error</li>
+</ul>
+
+<aside class="notes"><ul>
+<li>Die Inhalte, die in diesen XML-Elementen drin sind, werden im RFC nicht vorgegeben und kann für viele Funktionen genutzt werden.</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="software-small-clients-small">Software <small>Clients</small></h2>
+
+<h4 id="empfehlungen">Empfehlungen:</h4>
+
+<ul>
+<li>Conversations (Android)
+
+<ul>
+<li>Pix-Art Messenger</li>
+</ul></li>
+<li>ChatSecure (iPhone)</li>
+<li>Gajim (Desktop)</li>
+<li>ConverseJS (WebClient)</li>
+<li>Viele mehr
+
+<ul>
+<li>mit <a href="https://omemo.top">OMEMO</a></li>
+<li><a href="https://xmpp.org/software/clients.html">alle</a></li>
+</ul></li>
+</ul>
+
+</section><section>
+
+<h2 id="software-small-clients-small-1">Software <small>Clients</small></h2>
+
+<p>Bombus - Client in J2ME für normale Telefone
+<center>
+  <img width="50%" src="img/j2me-bombus.jpg" alt="Wikipedia - Article Java"/>
+</center></p>
+
+</section><section>
+
+<h2 id="software-small-server-small">Software <small>Server</small></h2>
+
+<ul>
+<li><p><strong>prosody</strong> in lua</p>
+
+<ul>
+<li>leicht erweiterbar</li>
+<li>riesige Sammlung an erweiterbaren Modulen (die man nutzen muss)</li>
+</ul></li>
+
+<li><p><strong>ejabberd</strong> (Fork: mongooseIM) in erlang</p>
+
+<ul>
+<li>besitzt alle nötigen Funktionen von Haus aus</li>
+<li>sehr gut gewartet</li>
+</ul></li>
+
+<li><p><strong>OpenFire</strong> in Java</p></li>
+</ul>
+
+</section><section>
+
+<h2 id="ist-der-hoster-gut">Ist der Hoster gut</h2>
+
+<p>Tools zum Testen des Servers (Auswahl an Servern)</p>
+
+<ul>
+<li><a href="https://compliance.conversations.im/">Compliance</a> (<a href="https://compliance.conversations.im/api/compliant_servers/">support Alles</a> / API)</li>
+<li><a href="https://status.conversations.im/historical/">Status</a> für S2S + Uptime</li>
+</ul>
+
+<p>XEPs:</p>
+
+<ul>
+<li>PEP / PubSub</li>
+<li>MAM (für MUC)</li>
+<li>HTTP-Upload</li>
+<li>DNS-SRV for TLS (HTTPS)</li>
+</ul>
+
+<aside class="notes"><ul>
+<li>Personal Eventing Protocol: Geolocation, Mood, Activity, Tune</li>
+<li>Message Archive Management:
+
+<ul>
+<li>Vorteil gegenüber: Threema und WhatsApp (mit OMEMO auch gegenüber Telegram)</li>
+<li>OMEMO: Neue Geräte können alte Nachrichten nicht entschlüsseln</li>
+</ul></li>
+<li>HTTP-Upload: Offline und in MUC Datenaustausch</li>
+<li>&ldquo;umgeht&rdquo; Firewalls</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="xmpp-4">XMPP</h2>
+
+<h3 id="verschlüsselung">Verschlüsselung</h3>
+
+<ul>
+<li>Off-The-Record</li>
+<li>OpenPGP</li>
+<li>OX</li>
+<li>OMEMO</li>
+</ul>
+
+<p>Detailert: <a href="https://conversations.im/omemo">here</a></p>
+
+<aside class="notes"><ul>
+<li>Neben TLS (SSL)</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="xmpp-small-verschlüsselung-small">XMPP <small>Verschlüsselung</small></h2>
+
+<ul>
+<li>Geräte erstellt <strong>asynchrones</strong> Schlüsselpaar
+
+<ul>
+<li>öffentlichen Schlüssel wird per PubSub auf dem Server hinterlegt</li>
+</ul></li>
+<li>Kontakte werden durch PEP / PubSub über neuen Schlüssel informiert
+
+<ul>
+<li>Dieser muss diesen öffentlichen Schlüssel laden</li>
+</ul></li>
+</ul>
+
+<aside class="notes"><ul>
+<li>synchrone: Entspricht einem Passwort, was allen Gesprächsteilnehmern bekannt ist.
+
+<ul>
+<li>asynchrone: mathematisches Verfahren mit Schlüsselpaaren (öffentlicher und privater Schlüssel)</li>
+</ul></li>
+<li>Kontakte = Roster</li>
+
+<li><p>den <strong>neuen oder weiteren</strong> öffentlichen Schlüssel</p></li>
+
+<li><p>Signiert und verschlüsselt</p></li>
+
+<li><p>zurückziehen des Schlüssels</p></li>
+</ul>
+</aside>
+
+</section><section>
+
+<p><center>
+<h1>Demo</h1>
+<a href="https://media.kuketz.de/blog/artikel/2016/conversations/Anleitung_Conversations_V1.1_CC-BY-SA.pdf">Anleitung</a>
+</center></p>
+
+</section><section>
+
+<h2 id="ausblick">Ausblick</h2>
+
+<ul>
+<li>Transports
+
+<ul>
+<li>Biboumi: IRC</li>
+<li>Spectrum2: e.g AIM, ICQ, MSN, Yahoo, Telegram, Twitter, &ldquo;WhatsApp&rdquo;</li>
+</ul></li>
+<li>PubSub
+
+<ul>
+<li>Blogging / Posting (siehe Movim)</li>
+</ul></li>
+<li>Commands
+
+<ul>
+<li>Internet of Things</li>
+</ul></li>
+</ul>
+
+<p><a href="https://xmpp.org/extensions/">XEP-Liste</a> letzter Eintrag: XEP-0410: MUC Self-Ping (Schrödinger&rsquo;s Chat)</p>
+
+<aside class="notes"><ul>
+<li>Transport WhatsApp Warnung, vor Protokolländerungen und Sperrungen</li>
+</ul>
+</aside>
+
+</section><section>
+
+<h2 id="alternativen-zu-xmpp">Alternativen zu XMPP</h2>
+
+<h4 id="peer-to-peer">Peer-to-Peer</h4>
+
+<ul>
+<li>Nutzen das Tor-Netzwerk
+
+<ul>
+<li><strong>Tox</strong></li>
+<li><strong>Briar</strong>
+
+<ul>
+<li>kann auch Local per Wifi und Bluetooth genutzt werden</li>
+</ul></li>
+<li>&hellip; (viele mehr)</li>
+</ul></li>
+
+<li><p>libp2p</p></li>
+
+<li><p>(mir sonst keine Weiteren bekannt &hellip;)</p></li>
+</ul>
+
+</section><section>
+
+<h2 id="alternativen-zu-xmpp-1">Alternativen zu XMPP</h2>
+
+<h4 id="federation">Federation</h4>
+
+<ul>
+<li><strong>Matrix</strong> (Riot):
+
+<ul>
+<li>Änderungsvorschläge am Protokoll werden durch das Unternehmen entschieden</li>
+</ul></li>
+<li>(mir sonst keine Weiteren bekannt &hellip;)</li>
+</ul>
+
+</section><section>
+
+<p><center>
+  <h1>Ende</h1>
+  <a href="https://www.ccc.de/de/hackerethik"><h4>Hackerethik</h4></a></p>
+
+<p><strong>3. Mißtraue Autoritäten – fördere Dezentralisierung.</strong>
+</center></p>
+</section>
+
+</div>
+      
+
+    </div>
+    <script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"css/main.css","highlight_theme":"qtcreator_dark","history":true,"margin":0.2,"transition":"slide","transition_speed":"fast"}</script>
+    <script type="application/json" id="reveal-hugo-page-params">null</script>
+    <script type="text/javascript"> window.revealHugoDependencies = { dependencies: [ { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/zoom-js/zoom.js', async: true },
+          
+          { src: '\/presentations\/reveal-js\/plugin\/notes\/notes.js', async: true }
+      ]};
+    </script>
+    <script src="https://ccchb.github.io/presentations/reveal-js/lib/js/head.min.js"></script>
+    <script src="https://ccchb.github.io/presentations/reveal-js/js/reveal.js"></script>
+    <script type="text/javascript">
+      
+      
+      function camelize(map) {
+        if (map) {
+          Object.keys(map).forEach(function(k) {
+            newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+            if (newK != k) {
+              map[newK] = map[k];
+              delete map[k];
+            }
+          });
+        }
+        return map;
+      }
+      
+      var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+      var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+      var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+      
+      var options = Object.assign({},
+        camelize(revealHugoDefaults),
+        camelize(revealHugoSiteParams),
+        camelize(revealHugoPageParams),
+        revealHugoDependencies);
+      Reveal.initialize(options);
+    </script>
+    
+    
+  </body>
+</html>

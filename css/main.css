@@ -1,0 +1,11 @@
+@import "reveal.css";
+
+.reveal .slides {
+	text-align: left;
+}
+body {
+	background-image: url(https://ccchb.de/logo/CCCHB-logo_256x256_bw.png);
+	background-position: left 20px top 10px;
+	background-repeat: no-repeat;
+	background-size: 8% auto;
+}

@@ -1,0 +1,76 @@
+<!doctype html><html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tags</title>
+    
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://ccchb.github.io/presentations/reveal-js/css/reveal.css">
+    <link rel="stylesheet" href="/presentations/css/main.css" id="theme">
+    <link rel="stylesheet" href="https://ccchb.github.io/presentations/highlight-js/src/styles/qtcreator_dark.css">
+    
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https:\/\/ccchb.github.io\/presentations\/reveal-js/css/print/pdf.css' : 'https:\/\/ccchb.github.io\/presentations\/reveal-js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+
+
+</div>
+      
+
+    </div>
+    <script type="application/json" id="reveal-hugo-site-params">{"custom_theme":"css/main.css","highlight_theme":"qtcreator_dark","history":true,"margin":0.2,"transition":"slide","transition_speed":"fast"}</script>
+    <script type="application/json" id="reveal-hugo-page-params">null</script>
+    <script type="text/javascript"> window.revealHugoDependencies = { dependencies: [ { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https:\/\/ccchb.github.io\/presentations\/reveal-js/plugin/zoom-js/zoom.js', async: true },
+          
+          { src: '\/presentations\/reveal-js\/plugin\/notes\/notes.js', async: true }
+      ]};
+    </script>
+    <script src="https://ccchb.github.io/presentations/reveal-js/lib/js/head.min.js"></script>
+    <script src="https://ccchb.github.io/presentations/reveal-js/js/reveal.js"></script>
+    <script type="text/javascript">
+      
+      
+      function camelize(map) {
+        if (map) {
+          Object.keys(map).forEach(function(k) {
+            newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+            if (newK != k) {
+              map[newK] = map[k];
+              delete map[k];
+            }
+          });
+        }
+        return map;
+      }
+      
+      var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+      var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+      var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+      
+      var options = Object.assign({},
+        camelize(revealHugoDefaults),
+        camelize(revealHugoSiteParams),
+        camelize(revealHugoPageParams),
+        revealHugoDependencies);
+      Reveal.initialize(options);
+    </script>
+    
+    
+  </body>
+</html>

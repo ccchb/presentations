@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200" width="185">
+  <circle  cx="62"  cy="50" r="15" fill="white" />
+  <circle cx="125"  cy="50" r="15" fill="white" />
+  <circle  cx="25" cy="100" r="15" fill="white" />
+  <circle  cx="62" cy="150" r="15" fill="white" />
+  <circle cx="125" cy="150" r="15" fill="white" />
+  <circle cx="162" cy="100" r="15" fill="white" />
+  <line    x1="62"  y1="50"   x2="125"  y2="50" stroke="white"/>
+  <line    x1="62"  y1="50"    x2="25" y2="100" stroke="white"/>
+  <line    x1="62"  y1="50"    x2="62" y2="150" stroke="white"/>
+  <line    x1="62"  y1="50"   x2="125" y2="150" stroke="white"/>
+  <line    x1="62"  y1="50"   x2="162" y2="100" stroke="white"/>
+  <line   x1="125"  y1="50"   x2="162" y2="100" stroke="white"/>
+  <line    x1="62" y1="150"   x2="162" y2="100" stroke="white"/>
+  <line    x1="25" y1="100"   x2="162" y2="100" stroke="white"/>
+  <line   x1="125" y1="150"   x2="162" y2="100" stroke="white"/>
+  <line    x1="62" y1="150"   x2="125" y2="150" stroke="white"/>
+  <line    x1="62" y1="150"    x2="25" y2="100" stroke="white"/>
+  <line    x1="62" y1="150"   x2="125"  y2="50" stroke="white"/>
+  <line    x1="25" y1="100"   x2="125"  y2="50" stroke="white"/>
+  <line    x1="25" y1="100"   x2="125" y2="150" stroke="white"/>
+  <line   x1="125"  y1="50"   x2="125" y2="150" stroke="white"/>
+</svg>
