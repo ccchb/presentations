@@ -1,12 +1,15 @@
-@title[Dezentrales Messenger (XMPP)]
-@snap[midpoint]
+---
+title: "Dezentrale Messenger"
+outputs:
+  - "Reveal"
+---
 
 <h2 style="white-space: nowrap;">Dezentrale Messenger</h2>
 <br/>
 <h4 style="white-space: nowrap;">The very last word in instant messaging</h4>
 (Motto vom XMPP-Client Converations)
 
-@snapend
+<span class="text-reboot">genofire - Chaos Computer Club Bremen e.V.</span>
 
 ---
 
@@ -18,6 +21,7 @@
 - Verschlüsselung
 - Ausblick
 - Alternativen
+
 ---
 
 ## Dezentralität
@@ -30,7 +34,7 @@ Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componen
 Kommunikation über zentrale Komponenten
 
 
-Note:
+{{% note %}}
 **P2P**
 - Postkasten, jeder kann zum Empfänger gehen und selbst etwas in den Kasten werfen.
   (wenn es keine Post gibt)
@@ -38,7 +42,7 @@ Note:
 **Federation**
 - E-Mail (ISP: benutzer@hoster.de)
 - Telefonnummern (Addr: hat oftmals die ersten Ziffern für sich reserviert)
-
+{{% /note %}}
 
 ---
 
@@ -54,7 +58,7 @@ Note:
     - blockieren / sperren (Zensur)
 - Verringert Missbrauch durch Vertrauen
 
-Note:
+{{% note %}}
 - _Eröffnet einen Wettbewerb:_ damit fortschritt
     (Gewinne gehen zum größten Teile in die USA)
    - Entscheidungen: z.B. nur noch auf Englisch, Mark Zuckerberg darf Nachrichten löschen
@@ -67,6 +71,7 @@ Note:
   - **Auswirkung:** nicht alle Daten können **geklaut** oder **analysiert** werden
     - Analysiert zur Manipulation (Werbung oder politisch, siehe Cambridge Analytica)
   - **Bei Missbrauch** leichterer Wechsel
+{{% /note %}}
 
 ---
 
@@ -79,10 +84,11 @@ Note:
 - Kann auch von kriminellen Elementen genutzt werden
 - Nutzer müssen sich ggf. sich Ihre Adresse und Passwort sich merken
 
-Note:
+{{% note %}}
 - _Komplexität steigt:_ Da nicht nur Clients, sondern auch Server untereinander sicher (Ausfall, vertrauensvoll) kommunizieren müssen.
 - _kriminellen Elementen:_ wie bei jeder Technologie kann diese auch von Bösen genutzt werden.
 - _... sich merken:_ allerdings müssen Sie dies auch für Ihre E-Mail-Adresse, was noch Standard im Internet ist.
+{{% /note %}}
 
 ---
 ### Extensible Messaging and Presence Protocol (XMPP)
@@ -95,10 +101,11 @@ Note:
 - Facebook 2010 - 2014
 - WhatsApp nutzt es intern
 
-Note:
+{{% note %}}
 - Jingle:
   - Aushandlung von Datenverbindung (angelehnt an SIP)
   - für: Datenaustausch, Video/Voice-Chat, ...
+{{% /note %}}
 
 ---
 
@@ -115,8 +122,7 @@ URI-Format: (falls MUC mit `?join` am Ende)
 xmpp:node@domain?join
 ```
 
-Note:
-
+{{% note %}}
 - MUC (Multi User Chat): Gruppenchat
 
 **Als User**
@@ -129,6 +135,7 @@ Note:
 
 **Transport**
 - ganz unterschiedlich
+{{% /note %}}
 
 ---
 ## XMPP
@@ -143,6 +150,7 @@ Note:
 ```
 
 Types:
+
 - chat
 - groupchat
 - headline
@@ -160,6 +168,7 @@ Types:
 ```
 
 Types:
+
 - error
 - probe
 - subscribe(d)
@@ -178,13 +187,15 @@ Types:
 ```
 
 Types:
+
 - get
 - set
 - result
 - error
 
-Note:
+{{% note %}}
 - Die Inhalte, die in diesen XML-Elementen drin sind, werden im RFC nicht vorgegeben und kann für viele Funktionen genutzt werden.
+{{% /note %}}
 
 ---
 
@@ -200,9 +211,13 @@ Note:
 	- [alle](https://xmpp.org/software/clients.html)
 
 ---
+
 ## Software <small>Clients</small>
 Bombus - Client in J2ME für normale Telefone
-<img width="50%" src="decentral_messaging/img/j2me-bombus.jpg" alt="Wikipedia - Article Java"/>
+<center>
+  <img width="50%" src="img/j2me-bombus.jpg" alt="Wikipedia - Article Java"/>
+</center>
+
 ---
 
 ## Software <small>Server</small>
@@ -220,22 +235,25 @@ Bombus - Client in J2ME für normale Telefone
 
 ## Ist der Hoster gut
 Tools zum Testen des Servers (Auswahl an Servern)
+
 - [Compliance](https://compliance.conversations.im/) ([support Alles](https://compliance.conversations.im/api/compliant_servers/) / API)
 - [Status](https://status.conversations.im/historical/) für S2S + Uptime
 
 XEPs:
+
 - PEP / PubSub
 - MAM (für MUC)
 - HTTP-Upload
 - DNS-SRV for TLS (HTTPS)
 
-Note:
+{{% note %}}
 - Personal Eventing Protocol: Geolocation, Mood, Activity, Tune
 - Message Archive Management:
   - Vorteil gegenüber: Threema und WhatsApp (mit OMEMO auch gegenüber Telegram)
   - OMEMO: Neue Geräte können alte Nachrichten nicht entschlüsseln
 - HTTP-Upload: Offline und in MUC Datenaustausch
 - "umgeht" Firewalls
+{{% /note %}}
 
 ---
 ## XMPP
@@ -248,10 +266,12 @@ Note:
 
 Detailert: [here](https://conversations.im/omemo)
 
-Note:
+{{% note %}}
 - Neben TLS (SSL)
+{{% /note %}}
 
 ---
+
 ## XMPP <small>Verschlüsselung</small>
 
 - Geräte erstellt **asynchrones** Schlüsselpaar
@@ -259,7 +279,7 @@ Note:
 - Kontakte werden durch PEP / PubSub über neuen Schlüssel informiert
   - Dieser muss diesen öffentlichen Schlüssel laden
 
-Note:
+{{% note %}}
 - synchrone: Entspricht einem Passwort, was allen Gesprächsteilnehmern bekannt ist.
   - asynchrone: mathematisches Verfahren mit Schlüsselpaaren (öffentlicher und privater Schlüssel)
 - Kontakte = Roster
@@ -267,14 +287,15 @@ Note:
 
 - Signiert und verschlüsselt
 - zurückziehen des Schlüssels
-
+{{% /note %}}
 
 ---
 
-@snap[midpoint]
+<center>
 <h1>Demo</h1>
 [Anleitung](https://media.kuketz.de/blog/artikel/2016/conversations/Anleitung_Conversations_V1.1_CC-BY-SA.pdf)
-@snapend
+</center>
+
 ---
 
 ## Ausblick
@@ -289,8 +310,9 @@ Note:
 
 [XEP-Liste](https://xmpp.org/extensions/) letzter Eintrag: XEP-0410: MUC Self-Ping (Schrödinger's Chat)
 
-Note:
+{{% note %}}
 - Transport WhatsApp Warnung, vor Protokolländerungen und Sperrungen
+{{% /note %}}
 
 ---
 
@@ -318,9 +340,9 @@ Note:
 
 ---
 
-@snap[midpoint]
-<h1>Ende</h1>
-<a href="https://www.ccc.de/de/hackerethik"><h4>Hackerethik</h4></a>
+<center>
+  <h1>Ende</h1>
+  <a href="https://www.ccc.de/de/hackerethik"><h4>Hackerethik</h4></a>
 
-3. **Mißtraue Autoritäten – fördere Dezentralisierung.**
-@snapend
+  **3. Mißtraue Autoritäten – fördere Dezentralisierung.**
+</center>
