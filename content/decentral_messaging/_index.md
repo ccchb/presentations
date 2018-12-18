@@ -25,23 +25,31 @@ outputs:
 ---
 
 ## Dezentralität
-- **Peer-to-Peer**
-
-Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componente)
-
 - **Federation**
 
 Kommunikation über verschieden unabhängige zentrale Komponenten
 
+<img src="./img/federation.svg" style="border: none; background:transparent;" />
+
+{{% note %}}
+**Federation**
+- E-Mail (ISP: benutzer@hoster.de)
+- Telefonnummern (Addr: hat oftmals die ersten Ziffern für sich reserviert)
+{{% /note %}}
+
+---
+
+## Dezentralität
+- **Peer-to-Peer**
+
+Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componente)
+
+<img src="./img/p2p.svg" style="border: none; background:transparent;" />
 
 {{% note %}}
 **P2P**
 - Postkasten, jeder kann zum Empfänger gehen und selbst etwas in den Kasten werfen.
   (wenn es keine Post gibt)
-
-**Federation**
-- E-Mail (ISP: benutzer@hoster.de)
-- Telefonnummern (Addr: hat oftmals die ersten Ziffern für sich reserviert)
 {{% /note %}}
 
 ---
