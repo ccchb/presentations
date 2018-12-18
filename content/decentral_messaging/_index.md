@@ -31,7 +31,7 @@ Geräte tauschen direkt miteinander Nachrichten aus (ohne eine zentrale Componen
 
 - **Federation**
 
-Kommunikation über zentrale Komponenten
+Kommunikation über verschieden unabhängige zentrale Komponenten
 
 
 {{% note %}}
@@ -82,7 +82,7 @@ Kommunikation über zentrale Komponenten
 - Komplexität steigt
 - Gewollte Verringerung an Marktanteil
 - Kann auch von kriminellen Elementen genutzt werden
-- Nutzer müssen sich ggf. sich Ihre Adresse und Passwort sich merken
+- Nutzer müssen ggf. sich Ihre Adresse und Passwort merken
 
 {{% note %}}
 - _Komplexität steigt:_ Da nicht nur Clients, sondern auch Server untereinander sicher (Ausfall, vertrauensvoll) kommunizieren müssen.
