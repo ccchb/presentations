@@ -23,6 +23,14 @@ outputs:
 - Alternativen
 
 ---
+## Dezentralität
+- vs. **Zentralität**
+
+Leider von den meisten Messenger verwendet
+
+<img src="./img/central.svg" style="border: none; background:transparent;" />
+
+---
 
 ## Dezentralität
 - **Federation**
